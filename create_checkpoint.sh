@@ -14,7 +14,10 @@ if [ -d "$checkpoint_dir" ]; then
 fi
 mkdir -p "$checkpoint_dir"
 
-# Copy all files and directories except .git and .gitignore
+# Copy all files and directories except .git and .gitignore, but include .env files
 rsync -av --exclude='.git' --exclude='.gitignore' --exclude='create_checkpoint.sh' --exclude='run.sh' --exclude='_checkpoints' --exclude='screenshots' ./ "$checkpoint_dir/"
+
+# Explicitly copy .env files (rsync excludes hidden files by default in some cases)
+find . -maxdepth 1 -name ".env*" -type f -exec cp {} "$checkpoint_dir/" \;
 
 echo "Checkpoint created at $checkpoint_dir"
