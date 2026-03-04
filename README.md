@@ -23,16 +23,6 @@ Then open Supabase Studio at http://localhost:8000 and log in with the following
 
 # SERVICES
 
-## Checkpoints
-
-This repository maintains snapshots of previous versions in the `checkpoints` directory. As the repository undergoes periodic updates, these historical checkpoints provide access to earlier configurations and component versions for reference or compatibility purposes.
-
-| Checkpoint  | supabase/studio | kong | supabase/gotrue | postgrest/postgrest | supabase/realtime | supabase/storage-api | darthsim/imgproxy | supabase/postgres-meta | supabase/edge-runtime | supabase/logflare | supabase/postgres | timberio/vector | supabase/supavisor |
-|-------------|----------------|------|-----------------|---------------------|-------------------|---------------------|-------------------|------------------------|----------------------|-------------------|-------------------|------------------|-------------------|
-| 2026-01-25 (current)  | 2025.12.17-sha-43f4f7f | 2.8.1 | v2.184.0 | v14.1 | v2.68.0 | v1.33.0 | v3.30.1 | v0.95.1 | v1.69.28 | 1.27.0 | 15.8.1.085 | 0.28.1-alpine | 2.7.4 |
-| 2025-10-01  | 2025.09.29-sha-626eb30 | 2.8.1 | v2.180.0 | v13.0.7 | v2.34.40 | v1.28.0 | v3.8.0 | v0.91.6 | v1.69.12 | 1.22.4 | 17.6.1.011 | 0.28.1-alpine | 2.7.0 |
-| 2025-03-22  | 20250224-d10db0f | 2.8.1 | v2.170.0 | v12.2.8 | v2.34.40 | v1.19.3 | v3.8.0 | v0.86.1 | v1.67.2 | 1.12.5 | 15.8.1.049 | 0.28.1-alpine | 2.4.12 |
-
 ## Available API Endpoints
 
 Supabase provides several API endpoints that are accessible at `localhost:8000`:
@@ -74,13 +64,3 @@ Before deploying to production:
 4. Set appropriate environment-specific variables for scaling and performance
 
 Never use the default credentials in a production environment as this poses significant security risks.
-
-# Screenshots
-
-<p>
-<img src="/screenshots/supabase-home.jpg" width="100%">
-</p>
-
-<p>
-<img src="/screenshots/supabase-database.jpg" width="100%">
-</p>
